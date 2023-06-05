@@ -56,3 +56,45 @@
   </body>
   <script src="calculadora.js"></script>
 </html>
+            
+            CSS
+            
+const primeiroNome = prompt("Informe o primeiro nome do recruta:?");
+const sobrenome = prompt("Informe o sobrenome do recruta:?");
+const anoDeNascimento = prompt("Informe o ano de nascimento do recruta:?");
+
+alert(
+  "Recruta cadastrado com sucesso!\n" +
+    "\nNome completo:" +
+    primeiroNome +
+    " " +
+    sobrenome +
+    "\nIdade: " +
+    (2023 - anoDeNascimento)
+);
+
+function inserir(num) {
+  document.querySelector(".tela").innerHTML += num;
+}
+
+function clean() {
+  document.querySelector(".tela").innerHTML = "";
+}
+
+function back() {
+  let tela = document.querySelector(".tela").innerHTML;
+  document.querySelector(".tela").innerHTML = tela.substring(
+    0,
+    tela.length - 1
+  );
+}
+
+function somar() {
+  let tela = document.querySelector(".tela").innerHTML;
+  document.querySelector(".tela").innerHTML = eval(tela);
+  if (tela) {
+    document.querySelector(".tela").innerHTML = eval(tela);
+  } else {
+    document.querySelector(".tela").innerHTML = "nenhum comando...";
+  }
+}
